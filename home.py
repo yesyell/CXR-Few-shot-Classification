@@ -2,12 +2,14 @@ import streamlit as st
 from PIL import Image
 from st_pages import Page, Section, show_pages, add_page_title
 
-st.title('Medical Image Project - by M3 :apple:')
+st.title('Few-shot Classification for Chest X-ray diagnosis')
+# emoji: https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
+st.header('using MIMIC-CXR & CLIP')
 
-st.header('Few-shot Classification of Chest X-ray Disease')
-st.subheader('MIMIC 데이터셋과 CLIP을 이용한 구조화된 임상적 소견 예측')
-st.image(Image.open('main.png'))
-st.image(Image.open('text.png'))
+st.image(Image.open('/Users/kim-yelin/Documents/DeepDaiv/demo/main.png'))
+# st.caption('MIMIC 데이터셋과 CLIP을 이용한 구조화된 임상적 소견 예측')
+
+st.image(Image.open('/Users/kim-yelin/Documents/DeepDaiv/demo/text.png'))
 
 col1, col2 = st.columns(2)
 
