@@ -1,13 +1,13 @@
 import streamlit as st
-from PIL import Image
+# from PIL import Image
 from st_pages import Page, Section, show_pages, add_page_title
 
 st.title('Medical Image Project - by M3 :apple:')
 
 st.header('Few-shot Classification of Chest X-ray Disease')
 st.subheader('MIMIC 데이터셋과 CLIP을 이용한 구조화된 임상적 소견 예측')
-st.image(Image.open('주제.png'))
-st.image(Image.open('텍스트.png'))
+# st.image(Image.open('주제.png'))
+# st.image(Image.open('텍스트.png'))
 
 col1, col2 = st.columns(2)
 
