@@ -1,5 +1,5 @@
-streamlit
+streamlit==1.27.1
 numpy
 pandas
-Pillow
-st_pages
+Pillow==10.0.1
+st_pages==0.4.5
