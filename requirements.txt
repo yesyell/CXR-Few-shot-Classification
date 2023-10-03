@@ -1,3 +1,5 @@
 streamlit
 numpy
 pandas
+Pillow
+st_pages
