@@ -20,10 +20,10 @@ def fix_image(upload):
     col1.write("X-ray Image :camera:")
     col1.image(image)
 
-    fixed = remove(image)
     col2.write("Result :wrench:")
     col2.success('pneumothorax', icon="✅")
-
+    col2.success('pneumonia', icon="✅")
+    
 col1, col2 = st.columns(2)
 my_upload = st.sidebar.file_uploader("Upload an image :gear:", type=["png", "jpg", "jpeg"])
 
