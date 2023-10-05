@@ -3,8 +3,7 @@ from PIL import Image
 from io import BytesIO
 import base64
 
-st.set_page_config(layout="wide", page_title="Image Background Remover")
-
+st.set_page_config(layout="wide", page_title="M3 demo", page_icon=":green_apple:")
 st.header('What diseases can be predicted from chest X-ray images?')
 
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB

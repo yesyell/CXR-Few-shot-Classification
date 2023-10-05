@@ -2,10 +2,11 @@ import streamlit as st
 from PIL import Image
 from st_pages import Page, Section, show_pages, add_page_title
 
+st.set_page_config(layout="wide", page_title="M3 demo", page_icon=":green_apple:")
 st.title('Few-shot Classification for Chest X-ray diagnosis')
-# emoji: https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
 st.header('using MIMIC-CXR & CLIP')
 
+st.image(Image.open('method.jpg'))
 st.image(Image.open('main.png'))
 # st.caption('MIMIC 데이터셋과 CLIP을 이용한 구조화된 임상적 소견 예측')
 
