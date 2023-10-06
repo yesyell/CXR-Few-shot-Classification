@@ -8,8 +8,14 @@ st.markdown("<h1 style='text-align: center; color: black;'>Few-shot Classificati
 st.markdown("<h4 style='text-align: center; color: gray;'>MIMIC-CXR 데이터셋과 CLIP을 이용한 구조화된 임상적 소견 예측</h4>", unsafe_allow_html=True)
 
 st.subheader('Motivation')
-st.image(Image.open('main.png'), width=700)
-# st.caption('MIMIC 데이터셋과 CLIP을 이용한 구조화된 임상적 소견 예측')
+st.image(Image.open('main.png'))
+
+col1, col2 = st.columns([1, 2])
+with col1:
+    st.image(Image.open('7ebbac6b-47f95f6d-9ec16e2c-57618b33-80555cfb.jpg'),  caption='7ebbac6b-47f95f6d-9ec16e2c-57618b33-80555cfb.jpg')
+with col2: 
+    st.image(Image.open('report.jpg'), caption='s55492232.txt')
+
 motivation = '''
 이 프로젝트는 소량의 X-선 이미지로부터 흉부 질병을 예측 및 분류할 수 있는  모델을 구현하는 것을 목표로 합니다. 예측 및 분류의 정확성을 높이기 위해  임상 소견이 포함된 방사선 리포트, 즉 X-선 이미지와 관련된 텍스트 정보를 함께 사용하였습니다. 
 **MIMIC-CXR** 데이터셋을 사용하고, **CLIP** (Contrastive Language-Image Pre-training)에서 사전학습한 인코더를 사용하여 질병 별로 적은 양의 데이터로도 효과적인 분류가 가능하도록 학습(few-shot learning) 하도록 구현하였습니다. 
@@ -37,18 +43,22 @@ experiments = '''
 '''
 st.markdown(experiments)
 
-st.image(Image.open('text.png'), width=700)
+st.image(Image.open('text.png'))
 
 col1, col2 = st.columns(2)
 
 with col1:
     pathology = st.selectbox(
       'Pathology',
-      ('pneumothorax', 'pneumonia', 'fluid overload/heart failure', 
-      'consolidation', 'pleural effusion', 'atelectasis', 
-      'pulmonary edema/hazy opacity', 'lung opacity', 'enlarged cardiac silhouette'),
-      # index=None,
-      # placeholder="Select pathology"
+      ('pneumothorax (기흉)', 
+      'pneumonia (폐렴)', 
+      'fluid overload/heart failure (심부전)', 
+      'consolidation (폐경화)', 
+      'pleural effusion (흉수)', 
+      'atelectasis (무기폐)', 
+      'pulmonary edema/hazy opacity (폐부종)', 
+      'lung opacity', 
+      'enlarged cardiac silhouette'),
     )
 
 with col2: 
@@ -60,11 +70,11 @@ with col2:
       'right mid lung zone', 'right upper lung zone', 
       'left hilar structures', 'right hilar structures', 
       'left costophrenic angle', 'right costophrenic angle',
-      'mediastinum', 'upper mediastinum',
-      'cardiac silhouette', 'trachea')
+      'mediastinum (종격동)', 'upper mediastinum',
+      'cardiac silhouette (심장)', 'trachea')
     )
 
-st.write('Template : ', pathology, 'in the', location)
+# st.write('Template : ', pathology, 'in the', location)
 
 st.subheader('Contribution')
 contribution = '''
