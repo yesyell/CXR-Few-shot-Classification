@@ -75,6 +75,11 @@ with col2:
     )
 
 # st.write('Template : ', pathology, 'in the', location)
+col1, col2 = st.columns(2)
+with col1:
+    st.image(Image.open('anatomy.jpeg'))
+with col2:
+    st.image(Image.open('review_areas.jpeg'))
 
 st.subheader('Contribution')
 contribution = '''
