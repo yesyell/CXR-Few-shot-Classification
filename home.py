@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 from st_pages import Page, Section, show_pages, add_page_title
-from annotated_text import annotated_text
 
 st.set_page_config(layout="wide", page_title="M3 demo", page_icon=":green_apple:")
 
@@ -65,12 +64,7 @@ with col2:
       'cardiac silhouette', 'trachea')
     )
 
-# st.write('Template : ', pathology, 'in the', location)
-annotated_text(
-    (pathology, "pathology", "#afa"),
-    " in the ",
-    (location, "location", "#8ef")
-)
+st.write('Template : ', pathology, 'in the', location)
 
 st.subheader('Contribution')
 contribution = '''
