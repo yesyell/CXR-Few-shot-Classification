@@ -1,4 +1,4 @@
-# Few-shot Learning을 통한 흉부 엑스레이 질병 분류
+# Disease Classification of Chest X-ray using CLIP and Few-shot Learning
 > MIMIC-CXR 데이터셋과 CLIP을 이용한 구조화된 임상적 소견 예측
 
 ## Dataset
